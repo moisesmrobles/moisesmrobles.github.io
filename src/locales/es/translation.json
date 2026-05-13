@@ -3,5 +3,52 @@
   "description": "Desarrollador Web Full-Stack",
   "nav_experience": "Experiencia",
   "nav_projects": "Proyectos",
-  "nav_skills": "Habilidades"
+  "nav_skills": "Habilidades",
+  "hero_title": "Creando soluciones web escalables",
+  "hero_subtitle": "Transformo ideas complejas en código limpio, eficiente y centrado en el usuario.",
+  "btn_projects": "Ver Proyectos",
+  "btn_cv": "Descargar CV",
+
+
+  "exp_zaitec_role": "Desarrollador Web Full-Stack (Prácticas DAW)",
+  "exp_zaitec_date": "Abril 2026 - Actualidad",
+  "exp_zaitec_desc": "Desarrollo integral del proyecto 'GestFincas', un portal Full-Stack para la gestión de comunidades. Implementación de módulos de autenticación, reservas y foros utilizando PHP, JavaScript, peticiones asíncronas (AJAX) y diseño adaptativo con Bootstrap.",
+  
+  "exp_megasur_role": "Desarrollador de Aplicaciones (Prácticas DAM)",
+  "exp_megasur_date": "Marzo 2023 - Junio 2023",
+  "exp_megasur_desc": "Desarrollo y mantenimiento de software multiplataforma. Creación de aplicaciones utilizando Java, Android Studio e Ionic Framework. Integración de bases de datos relacionales (MySQL, SQLite, H2) y desarrollo de arquitecturas asíncronas mediante WebSockets.",
+  
+  "exp_atarfe_role": "Técnico de Soporte Informático (Prácticas FP)",
+  "exp_atarfe_date": "Marzo 2017 - Junio 2017",
+  "exp_atarfe_desc": "Soporte técnico a usuarios, mantenimiento preventivo y correctivo de hardware, y asistencia en la configuración de redes locales y sistemas microinformáticos.",
+
+
+  "proj_profeweb_title": "ProfeWeb - Plataforma Educativa SaaS",
+  "proj_profeweb_desc": "Diseño y desarrollo Full-Stack de una plataforma educativa híbrida. Implementación de base de datos MySQL con PDO, seguridad contra inyecciones SQL, e interactividad asíncrona en tiempo real con Vanilla JS y API Fetch bajo el patrón MVC.",
+  "proj_gestfincas_title": "GestFincas - Gestión de Comunidades",
+  "proj_gestfincas_desc": "Portal Full-Stack desarrollado para la gestión integral de comunidades. Incluye módulos de autenticación, reservas y foros, utilizando peticiones asíncronas (AJAX) y un diseño adaptativo.",
+
+
+  "skills_backend": "Back-end",
+  "skills_frontend": "Front-end",
+  "skills_db": "Bases de Datos",
+  "skills_tools": "Herramientas e IA",
+  "skills_methodologies": "Metodologías y Flujos",
+
+
+  "nav_about": "Sobre Mí",
+  "about_title": "Conoce mi perfil",
+  "about_ai_desc": "Combino tecnologías consolidadas con el uso de Inteligencia Artificial (Prompt Engineering) en mi flujo de trabajo. Esto me otorga gran velocidad y autonomía para la resolución de bugs, refactorización y diseño de arquitectura de software.",
+  "certifications_title": "Certificaciones",
+  "cert_ai_title": "Iniciación al Desarrollo con IA: de 0 a Producción",
+  "cert_ai_school": "BIG school (Brais Moure) · Marzo 2026",
+  "languages_title": "Idiomas",
+  "lang_english": "Inglés (Nivel B1/B2 - Intermedio Alto)",
+
+
+  "about_ai_title": "Flujo de trabajo potenciado por IA 🤖",
+  "footer_built_with": "Desarrollado con",
+  "footer_ai_assist": "y asistencia de Inteligencia Artificial",
+  "footer_rights": "Todos los derechos reservados."
+
 }

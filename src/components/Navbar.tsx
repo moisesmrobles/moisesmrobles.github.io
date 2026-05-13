@@ -31,6 +31,9 @@ export const Navbar = () => {
         {/* Enlaces y Controles */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mx-auto fw-medium">
+            <li>
+              <a className="nav-link" href="#sobre-mi">{t('nav_about')}</a>
+            </li>
             <li className="nav-item">
               <a className="nav-link" href="#experiencia">{t('nav_experience')}</a>
             </li>

@@ -3,5 +3,50 @@
   "description": "Full-Stack Web Developer",
   "nav_experience": "Experience",
   "nav_projects": "Projects",
-  "nav_skills": "Skills"
+  "nav_skills": "Skills",
+  "hero_title": "Building scalable web solutions",
+  "hero_subtitle": "I transform complex ideas into clean, efficient, and user-centric code.",
+  "btn_projects": "View Projects",
+  "btn_cv": "Download CV",
+
+
+  "exp_zaitec_role": "Full-Stack Web Developer (DAW Internship)",
+  "exp_zaitec_date": "April 2026 - Present",
+  "exp_zaitec_desc": "Full development of the 'GestFincas' project, a Full-Stack portal for community management. Implementation of authentication, reservations, and forum modules using PHP, JavaScript, asynchronous requests (AJAX), and responsive design with Bootstrap.",
+  
+  "exp_megasur_role": "Application Developer (DAM Internship)",
+  "exp_megasur_date": "March 2023 - June 2023",
+  "exp_megasur_desc": "Development and maintenance of cross-platform software. Creation of applications using Java, Android Studio, and Ionic Framework. Integration of relational databases (MySQL, SQLite, H2) and development of asynchronous architectures using WebSockets.",
+  
+  "exp_atarfe_role": "IT Support Technician (VET Internship)",
+  "exp_atarfe_date": "March 2017 - June 2017",
+  "exp_atarfe_desc": "Technical support to users, preventive and corrective hardware maintenance, and assistance in the configuration of local networks and microcomputer systems.",
+
+
+  "proj_profeweb_title": "ProfeWeb - SaaS Educational Platform",
+  "proj_profeweb_desc": "Full-Stack design and development of a hybrid educational platform. Implementation of MySQL database with PDO, SQL injection security, and real-time asynchronous interactivity with Vanilla JS and Fetch API under the MVC pattern.",
+  "proj_gestfincas_title": "GestFincas - Community Management",
+  "proj_gestfincas_desc": "Full-Stack portal developed for comprehensive community management. Includes authentication, reservations, and forum modules, utilizing asynchronous requests (AJAX) and responsive design.",
+
+
+  "skills_backend": "Back-end",
+  "skills_frontend": "Front-end",
+  "skills_db": "Databases",
+  "skills_tools": "Tools & AI",
+  "skills_methodologies": "Methodologies & Workflows",
+
+  "nav_about": "About Me",
+  "about_title": "Get to know my profile",
+  "about_ai_desc": "I combine consolidated technologies with the use of Artificial Intelligence (Prompt Engineering) in my workflow. This gives me great speed and autonomy for bug resolution, code refactoring, and software architecture design.",
+  "certifications_title": "Certifications",
+  "cert_ai_title": "Intro to AI Development: From 0 to Production",
+  "cert_ai_school": "BIG school (Brais Moure) · March 2026",
+  "languages_title": "Languages",
+  "lang_english": "English (B1/B2 Level - Upper Intermediate)",
+
+  "about_ai_title": "AI-powered workflow 🤖",
+  "footer_built_with": "Built with",
+  "footer_ai_assist": "and Artificial Intelligence assistance",
+  "footer_rights": "All rights reserved."
+
 }
