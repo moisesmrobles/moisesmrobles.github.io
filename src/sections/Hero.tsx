@@ -10,17 +10,7 @@ export const Hero = () => {
         {t('welcome')}
       </h1>
       
-      {/* Título con el degradado Tech Blue */}
-      <h2 
-        className="display-2 fw-bolder mb-4" 
-        style={{
-          background: 'linear-gradient(90deg, #007bff, #00d4ff)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text',
-          color: 'transparent'
-        }}
-      >
+      <h2 className="display-2 fw-bolder mb-4 hero-glow-text">
         {t('hero_title')}
       </h2>
 

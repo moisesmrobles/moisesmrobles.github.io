@@ -1,0 +1,133 @@
+/* src/index.css */
+:root {
+  --tech-blue: #007bff;
+  --tech-cyan: #00d4ff;
+}
+
+/* 1. Sincronización con tu Hook useTheme.ts */
+/* Cuando tu hook pone el tema claro... */
+[data-bs-theme="light"] {
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  --badge-bg: rgba(0, 123, 255, 0.1);
+}
+
+/* Cuando tu hook pone el tema oscuro... */
+[data-bs-theme="dark"] {
+  --glass-bg: rgba(30, 30, 30, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --badge-bg: rgba(0, 212, 255, 0.1);
+}
+
+/* 2. Efecto de Profundidad (Glassmorphism) para Tarjetas */
+.glass-card {
+  background: var(--glass-bg) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* 3. Micro-interacciones (Hover) */
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 123, 255, 0.2);
+  border-color: rgba(0, 212, 255, 0.4) !important;
+}
+
+/* 4. Badges Premium para las Tecnologías */
+.premium-badge {
+  background-color: var(--badge-bg) !important;
+  color: var(--tech-cyan) !important;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  font-family: 'Fira Code', 'JetBrains Mono', monospace; 
+  transition: all 0.3s ease;
+}
+[data-bs-theme="light"] .premium-badge {
+  color: var(--tech-blue) !important;
+}
+.premium-badge:hover {
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.4);
+}
+
+/* 5. Título Principal Impactante (Glow) */
+.hero-glow-text {
+  background: linear-gradient(90deg, var(--tech-blue), var(--tech-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
+}
+
+/* 6. Timeline Vertical para Experiencia */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--tech-blue), var(--tech-cyan), transparent);
+}
+.timeline-dot {
+  position: absolute;
+  left: -2.4rem;
+  top: 1.5rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--tech-cyan);
+  border: 4px solid var(--tech-blue);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  z-index: 2;
+}
+
+/* 7. Navbar Glassmorphism */
+.glass-navbar {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--glass-border);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* 8. Enlaces animados del Navbar */
+.nav-link-custom {
+  position: relative;
+  transition: color 0.3s ease !important;
+}
+
+/* Línea inferior brillante (Glow) */
+.nav-link-custom::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, var(--tech-blue), var(--tech-cyan));
+  transition: width 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
+}
+
+.nav-link-custom:hover::after {
+  width: 80%; /* La línea crece al hacer hover */
+}
+
+/* Efecto de color en el texto según el tema */
+[data-bs-theme="dark"] .nav-link-custom:hover {
+  color: var(--tech-cyan) !important;
+}
+[data-bs-theme="light"] .nav-link-custom:hover {
+  color: var(--tech-blue) !important;
+}

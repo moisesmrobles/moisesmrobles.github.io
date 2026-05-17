@@ -1,13 +1,19 @@
 {
   "welcome": "¡Hola! Soy Moisés Moreno",
-  "description": "Desarrollador Web Full-Stack",
+  "hero_title": "Desarrollador Full-Stack & Prompt Engineer",
+  "hero_subtitle": "Domino el ciclo de vida completo del software. Combino la robustez del Back-end con el dinamismo del Front-end, integrando Inteligencia Artificial para acelerar el desarrollo y diseñar arquitecturas escalables. Aporto valor uniendo tecnologías consolidadas con los frameworks más modernos del mercado.",
   "nav_experience": "Experiencia",
   "nav_projects": "Proyectos",
   "nav_skills": "Habilidades",
-  "hero_title": "Creando soluciones web escalables",
-  "hero_subtitle": "Transformo ideas complejas en código limpio, eficiente y centrado en el usuario.",
   "btn_projects": "Ver Proyectos",
   "btn_cv": "Descargar CV",
+
+
+  "IA aplicada al código": "IA aplicada al código",
+  "Metodologías Ágiles": "Metodologías Ágiles",
+  "Redes": "Redes",
+  "Soporte IT": "Soporte IT",
+  "Ayuntamiento de Atarfe": "Ayuntamiento de Atarfe",
 
 
   "exp_zaitec_role": "Desarrollador Web Full-Stack (Prácticas DAW)",

@@ -6,16 +6,16 @@ export const Skills = () => {
   const { t } = useTranslation();
 
   return (
-    // id="habilidades" enlaza con el botón del Navbar
     <section id="habilidades" className="container py-5 mt-5 mb-5">
       <h2 className="display-5 fw-bold text-center mb-5">
         {t('nav_skills')}
       </h2>
 
+      {/* La clase "row" tiene que envolver el map, no al revés */}
       <div className="row g-4 justify-content-center">
         {skillsData.map((category) => (
           <div key={category.id} className="col-12 col-md-6 col-lg-4">
-            <div className="card h-100 shadow-sm border-0 bg-body-tertiary">
+            <div className="card h-100 glass-card bg-transparent border-0">
               <div className="card-body p-4">
                 <h4 className="card-title fw-bold mb-4" style={{ color: '#007bff' }}>
                   {t(category.titleKey)}
@@ -25,9 +25,9 @@ export const Skills = () => {
                   {category.skills.map((skill, index) => (
                     <span 
                       key={index} 
-                      className="badge bg-secondary bg-opacity-10 text-secondary border border-secondary border-opacity-25 px-3 py-2 fs-6 fw-medium"
+                      className="badge premium-badge px-3 py-2 fs-6"
                     >
-                      {skill}
+                      {t(skill)} {/* <-- Aquí añadimos la t() */}
                     </span>
                   ))}
                 </div>

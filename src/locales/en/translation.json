@@ -1,13 +1,19 @@
 {
   "welcome": "Hi! I'm Moisés Moreno",
-  "description": "Full-Stack Web Developer",
+  "hero_title": "Full-Stack Developer & Prompt Engineer",
+  "hero_subtitle": "I master the complete software lifecycle. I combine Back-end robustness with Front-end dynamism, integrating Artificial Intelligence to accelerate development and design scalable architectures. I bring value by bridging consolidated technologies with the most modern frameworks on the market.",
   "nav_experience": "Experience",
   "nav_projects": "Projects",
   "nav_skills": "Skills",
-  "hero_title": "Building scalable web solutions",
-  "hero_subtitle": "I transform complex ideas into clean, efficient, and user-centric code.",
   "btn_projects": "View Projects",
   "btn_cv": "Download CV",
+
+
+  "IA aplicada al código": "AI applied to code",
+  "Metodologías Ágiles": "Agile Methodologies",
+  "Redes": "Networking",
+  "Soporte IT": "IT Support",
+  "Ayuntamiento de Atarfe": "Atarfe City Council",
 
 
   "exp_zaitec_role": "Full-Stack Web Developer (DAW Internship)",

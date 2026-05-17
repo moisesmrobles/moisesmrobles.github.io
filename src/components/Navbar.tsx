@@ -11,18 +11,19 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary shadow-sm sticky-top">
-      <div className="container">
-        {/* Tu Logo / Nombre */}
-        <a className="navbar-brand fw-bold" href="#">
-          Moisés Moreno <span className="text-primary">Dev</span>
+    <nav className="navbar navbar-expand-lg glass-navbar shadow-sm sticky-top">
+      <div className="container py-2">
+        
+        {/* Logo Premium con Resplandor */}
+        <a className="navbar-brand fw-bold fs-4" href="#">
+          Moisés Moreno <span className="hero-glow-text">Dev</span>
         </a>
 
-        {/* Botón hamburguesa para móviles */}
-        <button 
-          className="navbar-toggler" 
-          type="button" 
-          data-bs-toggle="collapse" 
+        {/* Botón hamburguesa sin borde feo */}
+        <button
+          className="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
         >
           <span className="navbar-toggler-icon"></span>
@@ -30,25 +31,26 @@ export const Navbar = () => {
 
         {/* Enlaces y Controles */}
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav mx-auto fw-medium">
-            <li>
-              <a className="nav-link" href="#sobre-mi">{t('nav_about')}</a>
+          <ul className="navbar-nav mx-auto fw-medium gap-3">
+            <li className="nav-item">
+              <a className="nav-link nav-link-custom" href="#sobre-mi">{t('nav_about')}</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#experiencia">{t('nav_experience')}</a>
+              <a className="nav-link nav-link-custom" href="#experiencia">{t('nav_experience')}</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#proyectos">{t('nav_projects')}</a>
+              <a className="nav-link nav-link-custom" href="#proyectos">{t('nav_projects')}</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#habilidades">{t('nav_skills')}</a>
+              <a className="nav-link nav-link-custom" href="#habilidades">{t('nav_skills')}</a>
             </li>
           </ul>
-          
+
           {/* Controles de Idioma y Tema */}
-          <div className="d-flex gap-2 align-items-center mt-3 mt-lg-0">
-            <button 
-              className="btn btn-sm btn-outline-primary fw-bold" 
+          <div className="d-flex gap-3 align-items-center mt-3 mt-lg-0 justify-content-center">
+            {/* Botón de idioma convertido en un Badge Premium */}
+            <button
+              className="btn premium-badge fw-bold px-3 py-1 rounded-pill"
               onClick={changeLanguage}
               title="Cambiar idioma"
             >
@@ -57,6 +59,7 @@ export const Navbar = () => {
             <ThemeToggleButton />
           </div>
         </div>
+
       </div>
     </nav>
   );
