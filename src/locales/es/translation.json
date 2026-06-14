@@ -40,6 +40,7 @@
   "skills_db": "Bases de Datos",
   "skills_tools": "Herramientas e IA",
   "skills_methodologies": "Metodologías y Flujos",
+  "GitHub Flow": "GitHub Flow",
 
 
   "nav_about": "Sobre Mí",
@@ -51,10 +52,22 @@
   "languages_title": "Idiomas",
   "lang_english": "Inglés (Nivel B1/B2 - Intermedio Alto)",
 
+  "btn_view_details": "Ver detalles",
+  "btn_close": "Cerrar",
 
   "about_ai_title": "Flujo de trabajo potenciado por IA 🤖",
   "footer_built_with": "Desarrollado con",
   "footer_ai_assist": "y asistencia de Inteligencia Artificial",
-  "footer_rights": "Todos los derechos reservados."
+  "footer_rights": "Todos los derechos reservados.",
 
+
+"proj_profeweb_details": "🎓 ProfeWeb: Plataforma Educativa Abierta y Gestión Docente\n\n✅ Estado del proyecto: Proyecto individual completamente terminado y operativo.\n\n📝 Descripción General\nProfeWeb es una plataforma web educativa integral ofrecida como Software como Servicio (SaaS), diseñada específicamente para empoderar a docentes individuales en la gestión de su labor académica y en la comunicación con su comunidad educativa. A diferencia de los Sistemas de Gestión de Aprendizaje (LMS) tradicionales centrados en instituciones complejas, ProfeWeb se posiciona en un nicho B2C (Business-to-Consumer) que prioriza la marca personal del profesor, la portabilidad de su trabajo y, sobre todo, la eliminación de barreras tecnológicas para las familias.\n\n🛠️ Stack Tecnológico\n- Backend: Construido en PHP 8 nativo (sin frameworks comerciales) para demostrar un dominio profundo del lenguaje.\n- Base de Datos: MySQL / MariaDB utilizando conexiones exclusivas mediante PDO (PHP Data Objects) y sentencias preparadas.\n- Frontend: HTML5, CSS3 y JavaScript (Vanilla JS).\n- Framework UI: Bootstrap 5 con un sistema de tarjetas (Cards) interactivo y diseño 100% responsivo.\n- Interactividad: API Fetch y AJAX para actualización de datos en tiempo real sin recargas.\n\n🚀 Arquitectura y Buenas Prácticas\n- Patrón MVC Personalizado: Código fuente rigurosamente separado. Los Modelos gestionan la lógica de negocio; las Vistas manejan la interfaz; y los Controladores (mediante un Enrutador Frontal dinámico propio) procesan las peticiones HTTP.\n- Seguridad y Sesiones: Autenticación con cifrado password_hash(), control de sesiones estricto (session_start()) con un middleware propio para proteger rutas, y sanitización con htmlspecialchars() para prevenir ataques XSS.\n- Patrón Singleton: La conexión a la base de datos se gestiona mediante una clase Core que garantiza una única y eficiente instancia durante toda la ejecución.\n\n🧩 Módulos y Funcionalidades Principales\n1. Entornos Interconectados: Divide el sistema en un 'Panel Privado' (Backend) para la administración exclusiva del docente, y un 'Perfil Público' (Frontend) de acceso libre para que padres y alumnos visualicen el material sin necesidad de registrarse.\n2. Control de Visibilidad Granular: La característica estrella del proyecto. El docente tiene control absoluto sobre cada elemento. Mediante un interruptor booleano (es_publico), puede planificar en modo 'Privado' y pasarlo a 'Público' instantáneamente cuando esté listo para impartirse.",
+"proj_gestfincas_details": "🏢 GestFincas: Plataforma Integral de Gestión de Comunidades\n\n✅ Estado del proyecto: Proyecto colaborativo en equipo completamente terminado y operativo.\n\n📝 Descripción General\nGestFincas es una aplicación web Mobile-First diseñada para modernizar y digitalizar la administración de comunidades de vecinos. La plataforma centraliza la comunicación, la participación democrática y la gestión de recursos de la comunidad, ofreciendo interfaces adaptadas según el nivel de privilegios del usuario (Presidente/Administrador o Vecino). Al no depender de frameworks de backend, el proyecto demuestra un dominio profundo de los fundamentos de la programación del lado del servidor, la manipulación de bases de datos relacionales y la creación de una arquitectura MVC escalable y segura.\n\n🛠️ Stack Tecnológico\n- Backend (Lógica del Servidor): PHP Puro / Vanilla PHP (v8.0+) orientado a objetos. Arquitectura MVC propia con Enrutador personalizado. Seguridad basada en roles (RBAC) y encriptación de contraseñas con PASSWORD_BCRYPT.\n- Base de Datos: MySQL / MariaDB utilizando PDO con sentencias preparadas de forma estricta para garantizar la máxima seguridad contra inyecciones SQL.\n- Frontend (Interfaz de Usuario): HTML5 Semántico y CSS3. Uso intensivo de variables nativas CSS para el cambio dinámico a Modo Oscuro vía localStorage. JavaScript puro (Vanilla JS ES6+) y Fetch API (AJAX) para peticiones asíncronas en tiempo real.\n- Framework UI y Librerías: Bootstrap 5 personalizado a medida mediante SASS. Font Awesome 6 para iconografía, Chart.js para el renderizado de gráficos dinámicos y PHPMailer para el envío automatizado de correos vía SMTP.\n- Metodología y Control de Versiones: Git y GitHub utilizando la estrategia GitHub Flow (ramas de features, Pull Requests y Code Reviews antes del merge a main).\n\n🧩 Módulos y Funcionalidades Principales\n1. Sistema de Autenticación (RBAC) con flujo seguro de recuperación de contraseñas mediante tokens temporales.\n2. Panel de Administración ('Mi Comunidad') para alta de viviendas, con envío automático de invitaciones por correo (vía PHPMailer) que incluyen un enlace seguro para que el usuario complete su registro autocompletando los datos de su vivienda.\n3. Módulo de Reservas de Espacios Comunes gestionado asíncronamente con Fetch API.\n4. Módulo de Votaciones y Democracia Digital apoyado en visualizaciones de Chart.js.\n5. Módulo de Convocatorias y Reuniones.\n\n🌟 Últimas Implementaciones Integradas\nEl desarrollo concluyó exitosamente integrando:\n- Módulo de Parking: Asignación y gestión visual de plazas de aparcamiento para residentes.\n- Sistema de Incidencias: Procesamiento de backend para subir y adjuntar evidencias fotográficas.\n- Módulo Financiero: Desglose y visualización detallada del pago de cuotas y gastos de la comunidad.",
+  
+  "proj_status_completed": "🚀 Terminado",
+  "proj_status_in_progress": "👨‍💻 En desarrollo continuo",
+  "proj_team_individual": "👤 Proyecto Individual",
+  "proj_team_group": "👥 Proyecto en Equipo",
+  "proj_role_fullstack": "Rol: Full-Stack Developer",
+  "proj_role_gestfincas": "Rol: Full-Stack Developer | Lead QA & GitHub Flow"
 }

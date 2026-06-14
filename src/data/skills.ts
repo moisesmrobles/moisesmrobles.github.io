@@ -30,5 +30,10 @@ export const skillsData: SkillCategory[] = [
     id: 'methodologies',
     titleKey: 'skills_methodologies',
     skills: ['Scrum', 'Metodologías Ágiles']
+  },
+  {
+    id: 'methodologies',
+    titleKey: 'skills_methodologies',
+    skills: ['Scrum', 'Metodologías Ágiles', 'GitHub Flow'] // <-- Añadido aquí
   }
 ];

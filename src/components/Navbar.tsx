@@ -1,6 +1,7 @@
 // src/components/Navbar.tsx
 import { useTranslation } from 'react-i18next';
 import { ThemeToggleButton } from './ThemeToggleButton';
+import { BsTerminalFill } from 'react-icons/bs'; 
 
 export const Navbar = () => {
   const { t, i18n } = useTranslation();
@@ -14,9 +15,10 @@ export const Navbar = () => {
     <nav className="navbar navbar-expand-lg glass-navbar shadow-sm sticky-top">
       <div className="container py-2">
         
-        {/* Logo Premium con Resplandor */}
-        <a className="navbar-brand fw-bold fs-4" href="#">
-          Moisés Moreno <span className="hero-glow-text">Dev</span>
+        {/* Logo Premium con Icono y Resplandor */}
+        <a className="navbar-brand fw-bold fs-4 d-flex align-items-center gap-2" href="#">
+          <BsTerminalFill className="text-primary" />
+          <span>Moisés Moreno <span className="hero-glow-text">Dev</span></span>
         </a>
 
         {/* Botón hamburguesa sin borde feo */}

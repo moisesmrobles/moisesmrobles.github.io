@@ -40,6 +40,7 @@
   "skills_db": "Databases",
   "skills_tools": "Tools & AI",
   "skills_methodologies": "Methodologies & Workflows",
+  "GitHub Flow": "GitHub Flow",
 
   "nav_about": "About Me",
   "about_title": "Get to know my profile",
@@ -50,9 +51,25 @@
   "languages_title": "Languages",
   "lang_english": "English (B1/B2 Level - Upper Intermediate)",
 
+
+  "btn_view_details": "View details",
+  "btn_close": "Close",
+
+
   "about_ai_title": "AI-powered workflow 🤖",
   "footer_built_with": "Built with",
   "footer_ai_assist": "and Artificial Intelligence assistance",
-  "footer_rights": "All rights reserved."
+  "footer_rights": "All rights reserved.",
+
+"proj_profeweb_details": "🎓 ProfeWeb: Open Educational Platform and Teaching Management\n\n✅ Project Status: Fully completed and operational individual project.\n\n📝 General Description\nProfeWeb is a comprehensive educational web platform offered as Software as a Service (SaaS), specifically designed to empower individual teachers in managing their academic work and communicating with their educational community. Unlike traditional Learning Management Systems (LMS) focused on complex institutions, ProfeWeb positions itself in a B2C (Business-to-Consumer) niche that prioritizes the teacher's personal brand, the portability of their work, and above all, the elimination of technological barriers for families.\n\n🛠️ Tech Stack\n- Backend: Built in native PHP 8 (without commercial frameworks) to demonstrate a deep mastery of the language.\n- Database: MySQL / MariaDB using exclusive connections via PDO (PHP Data Objects) and prepared statements.\n- Frontend: HTML5, CSS3, and JavaScript (Vanilla JS).\n- UI Framework: Bootstrap 5 featuring an interactive card system and a 100% responsive design.\n- Interactivity: Fetch API and AJAX for real-time data updates without reloads.\n\n🚀 Architecture & Best Practices\n- Custom MVC Pattern: Strictly separated source code. Models manage business logic; Views handle the user interface; and Controllers (via a custom dynamic Front Router) process HTTP requests.\n- Security & Sessions: Authentication with password_hash() encryption, strict session control (session_start()) using a custom middleware to protect routes, and sanitization with htmlspecialchars() to prevent XSS attacks.\n- Singleton Pattern: Database connection is managed through a Core class that guarantees a single and efficient instance throughout the execution.\n\n🧩 Main Modules & Features\n1. Interconnected Environments: Divides the system into a 'Private Panel' (Backend) for exclusive teacher administration, and a 'Public Profile' (Frontend) with free access so parents and students can view materials without registering.\n2. Granular Visibility Control: The star feature of the project. The teacher has absolute control over every element. Through a boolean switch (es_publico), they can plan in 'Private' mode and switch to 'Public' instantly when ready to teach.",
+"proj_gestfincas_details": "🏢 GestFincas: Comprehensive Community Management Platform\n\n✅ Project Status: Fully completed and operational collaborative team project.\n\n📝 General Description\nGestFincas is a Mobile-First web application designed to modernize and digitize the administration of residential communities. The platform centralizes communication, democratic participation, and community resource management, offering tailored interfaces based on user privilege levels (President/Administrator or Resident). By not relying on backend frameworks, the project demonstrates a deep mastery of server-side programming fundamentals, relational database manipulation, and the creation of a scalable and secure MVC architecture.\n\n🛠️ Tech Stack\n- Backend (Server Logic): Pure / Vanilla PHP (v8.0+) object-oriented. Custom MVC architecture with a custom Router. Role-based security (RBAC) and password encryption using PASSWORD_BCRYPT.\n- Database: MySQL / MariaDB using PDO with strict prepared statements to guarantee maximum security against SQL injections.\n- Frontend (User Interface): Semantic HTML5 and CSS3. Intensive use of native CSS variables for dynamic Dark Mode switching via localStorage. Pure JavaScript (Vanilla JS ES6+) and Fetch API (AJAX) for real-time asynchronous requests.\n- UI Framework & Libraries: Bootstrap 5 custom-tailored using SASS. Font Awesome 6 for iconography, Chart.js for rendering dynamic charts, and PHPMailer for automated SMTP email dispatch.\n- Version Control & Methodology: Git and GitHub using the GitHub Flow strategy (feature branches, Pull Requests, and Code Reviews before merging to main).\n\n🧩 Main Modules & Features\n1. Authentication System (RBAC) featuring a secure password recovery flow using single-use temporary tokens.\n2. Administration Panel ('My Community') for registering properties, featuring automatic email invitations (via PHPMailer) with secure links allowing new residents to seamlessly complete their registration with auto-filled housing data.\n3. Common Area Reservation Module managed asynchronously with Fetch API.\n4. Voting & Digital Democracy Module supported by Chart.js visualizations.\n5. Summons & Meetings Module.\n\n🌟 Latest Integrated Implementations\nThe development successfully concluded by integrating:\n- Parking Module: Visual assignment and management of parking spaces for residents.\n- Incident System: Backend processing for uploading and attaching photographic evidence.\n- Financial Module: Detailed breakdown and visualization of quota payments and community expenses.",
+
+
+  "proj_status_completed": "🚀 Completed",
+  "proj_status_in_progress": "👨‍💻 Continuous Development",
+  "proj_team_individual": "👤 Individual Project",
+  "proj_team_group": "👥 Team Project",
+  "proj_role_fullstack": "Role: Full-Stack Developer",
+  "proj_role_gestfincas": "Role: Full-Stack Developer | Lead QA & GitHub Flow"
 
 }
