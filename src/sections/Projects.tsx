@@ -9,6 +9,8 @@ export const Projects = () => {
   
   // ESTADO: Controla si el carrusel está en pantalla completa
   const [isExpanded, setIsExpanded] = useState(false);
+  // NUEVO ESTADO: Controla el "Super Zoom" dentro de la pantalla completa
+  const [innerZoom, setInnerZoom] = useState(false);
 
   return (
     <section id="proyectos" className="container py-5 mt-5">
@@ -51,7 +53,8 @@ export const Projects = () => {
                   data-bs-target="#projectModal"
                   onClick={() => {
                     setSelectedProject(project);
-                    setIsExpanded(false); // Siempre empieza minimizado
+                    setIsExpanded(false);
+                    setInnerZoom(false); // Reseteamos zoom al abrir
                   }}
                 >
                   {t('btn_view_details')}
@@ -67,7 +70,6 @@ export const Projects = () => {
         <div className="modal-dialog modal-dialog-centered modal-lg">
           <div className="modal-content glass-card bg-transparent border-0 shadow-lg">
             
-            {/* ENCABEZADO CORREGIDO PARA MÓVILES EXTREMOS */}
             <div className="modal-header border-bottom border-secondary border-opacity-25 align-items-start">
               <div className="w-100 pe-4">
                 <h5 className="modal-title fw-bold fs-4 text-wrap lh-base" id="projectModalLabel">
@@ -100,7 +102,7 @@ export const Projects = () => {
                             className="d-block w-100 object-fit-contain"
                             autoPlay loop muted playsInline
                             style={{ height: '400px', cursor: 'zoom-in' }}
-                            onClick={() => setIsExpanded(true)}
+                            onClick={() => { setIsExpanded(true); setInnerZoom(false); }}
                           >
                             Tu navegador no soporta el vídeo.
                           </video>
@@ -110,7 +112,7 @@ export const Projects = () => {
                             className="d-block w-100 object-fit-contain" 
                             alt={`Captura de pantalla de ${t(selectedProject.titleKey)}`}
                             style={{ height: '400px', cursor: 'zoom-in' }} 
-                            onClick={() => setIsExpanded(true)}
+                            onClick={() => { setIsExpanded(true); setInnerZoom(false); }}
                           />
                         )}
                       </div>
@@ -156,7 +158,7 @@ export const Projects = () => {
         </div>
       </div>
 
-      {/* VISOR DE PANTALLA COMPLETA TOTAL (Con animaciones CSS) */}
+      {/* VISOR DE PANTALLA COMPLETA TOTAL (Con animaciones y Super Zoom) */}
       {selectedProject && selectedProject.media && (
         <div 
           className="position-fixed top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
@@ -166,23 +168,25 @@ export const Projects = () => {
             backdropFilter: 'blur(10px)',
             opacity: isExpanded ? 1 : 0, 
             visibility: isExpanded ? 'visible' : 'hidden',
-            transition: 'opacity 0.3s ease-in-out, visibility 0.3s ease-in-out'
+            transition: 'opacity 0.3s ease-in-out, visibility 0.3s ease-in-out',
+            overflow: innerZoom ? 'auto' : 'hidden' // Permite scroll si la imagen se hace gigante
           }}
         >
           {/* BOTÓN CERRAR PANTALLA COMPLETA */}
           <button 
             type="button" 
-            className="btn-close btn-close-white position-absolute top-0 end-0 m-4" 
+            className="btn-close btn-close-white position-fixed top-0 end-0 m-4" 
             style={{ zIndex: 1090, width: '1.5rem', height: '1.5rem' }} 
-            onClick={() => setIsExpanded(false)}
+            onClick={() => { setIsExpanded(false); setInnerZoom(false); }}
             aria-label="Cerrar"
           ></button>
 
-          {/* Carrusel Clonado para Pantalla Completa con Zoom-In */}
+          {/* Carrusel Clonado para Pantalla Completa con Super Zoom */}
           <div 
             id={`carousel-fullscreen-${selectedProject.id}`} 
             className="carousel slide w-100 h-100" 
             data-bs-ride="carousel"
+            data-bs-touch="false" // Desactivamos el swipe nativo de Bootstrap si está con zoom
             style={{
               transform: isExpanded ? 'scale(1)' : 'scale(0.9)',
               transition: 'transform 0.3s ease-in-out'
@@ -200,8 +204,18 @@ export const Projects = () => {
                   ) : (
                     <img 
                       src={item.url} 
-                      className="d-block w-100 h-100 object-fit-contain p-4" 
+                      className="d-block w-100 h-100 p-lg-4" 
                       alt={`Captura de pantalla de ${t(selectedProject.titleKey)}`}
+                      style={{ 
+                        objectFit: 'contain',
+                        transform: innerZoom ? 'scale(2.2)' : 'scale(1)',
+                        cursor: innerZoom ? 'zoom-out' : 'zoom-in',
+                        transition: 'transform 0.3s ease-in-out'
+                      }}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setInnerZoom(!innerZoom); // Alternar el Super Zoom
+                      }}
                     />
                   )}
                 </div>
@@ -209,13 +223,27 @@ export const Projects = () => {
             </div>
             
             {/* Controles de Pantalla Completa */}
-            {selectedProject.media.length > 1 && (
+            {selectedProject.media.length > 1 && !innerZoom && (
               <>
-                <button className="carousel-control-prev" type="button" data-bs-target={`#carousel-fullscreen-${selectedProject.id}`} data-bs-slide="prev" style={{ width: '10%' }}>
+                <button 
+                  className="carousel-control-prev" 
+                  type="button" 
+                  data-bs-target={`#carousel-fullscreen-${selectedProject.id}`} 
+                  data-bs-slide="prev" 
+                  style={{ width: '10%' }}
+                  onClick={() => setInnerZoom(false)} // Resetear zoom al cambiar foto
+                >
                   <span className="carousel-control-prev-icon" aria-hidden="true" style={{ width: '3rem', height: '3rem' }}></span>
                   <span className="visually-hidden">Anterior</span>
                 </button>
-                <button className="carousel-control-next" type="button" data-bs-target={`#carousel-fullscreen-${selectedProject.id}`} data-bs-slide="next" style={{ width: '10%' }}>
+                <button 
+                  className="carousel-control-next" 
+                  type="button" 
+                  data-bs-target={`#carousel-fullscreen-${selectedProject.id}`} 
+                  data-bs-slide="next" 
+                  style={{ width: '10%' }}
+                  onClick={() => setInnerZoom(false)} // Resetear zoom al cambiar foto
+                >
                   <span className="carousel-control-next-icon" aria-hidden="true" style={{ width: '3rem', height: '3rem' }}></span>
                   <span className="visually-hidden">Siguiente</span>
                 </button>
